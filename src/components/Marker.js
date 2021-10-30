@@ -15,8 +15,8 @@ const Marker = (props) => {
 
     return (
         <div className={classes.marker} onClick={() => clickHandler(props.name)}>
-            {/* <i className="fas fa-map-pin" style={{color: 'yellow', padding: '10px'}}></i> */}
-            <img src={props.flag} alt="marker"/> 
+            <i className="fas fa-map-pin" style={{color: 'yellow', padding: '10px'}}></i>
+            {/* <img src={props.flag} alt="marker"/>  */}
         </div>
     )
 }
