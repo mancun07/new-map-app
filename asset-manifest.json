@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/new-map-app/static/css/main.f3f42e13.chunk.css",
+    "main.js": "/new-map-app/static/js/main.bb06e6d8.chunk.js",
+    "main.js.map": "/new-map-app/static/js/main.bb06e6d8.chunk.js.map",
+    "runtime-main.js": "/new-map-app/static/js/runtime-main.682c4c0f.js",
+    "runtime-main.js.map": "/new-map-app/static/js/runtime-main.682c4c0f.js.map",
+    "static/js/2.3adb3213.chunk.js": "/new-map-app/static/js/2.3adb3213.chunk.js",
+    "static/js/2.3adb3213.chunk.js.map": "/new-map-app/static/js/2.3adb3213.chunk.js.map",
+    "index.html": "/new-map-app/index.html",
+    "static/css/main.f3f42e13.chunk.css.map": "/new-map-app/static/css/main.f3f42e13.chunk.css.map",
+    "static/js/2.3adb3213.chunk.js.LICENSE.txt": "/new-map-app/static/js/2.3adb3213.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.682c4c0f.js",
+    "static/js/2.3adb3213.chunk.js",
+    "static/css/main.f3f42e13.chunk.css",
+    "static/js/main.bb06e6d8.chunk.js"
+  ]
+}
