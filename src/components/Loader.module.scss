@@ -8,6 +8,10 @@
   padding-top:100px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .lds-dual-ring {
     display: inline-block;
     width: 80px;

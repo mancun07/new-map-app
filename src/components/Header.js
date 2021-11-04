@@ -19,10 +19,12 @@ const Header = () => {
 
     const onChangeHandler = (value) => {
         dispatch(countryActions.filterByQuantity(value))
+        dispatch(countryActions.toggleMenu())
     }
 
     const onChangeHandler2 = (value) => {
         dispatch(countryActions.filterByLanguage(value))
+        dispatch(countryActions.toggleMenu())
     }
 
     const mobileMenuHandler = () => {
