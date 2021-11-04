@@ -3,6 +3,7 @@
     color: #fff;
     text-align: center;
     padding:10px;
+    
 
     select {
         padding:3px;
@@ -50,6 +51,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-size: 1.2rem;
 
     &__item {
         text-align: left;
