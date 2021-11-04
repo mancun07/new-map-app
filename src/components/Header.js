@@ -54,7 +54,7 @@ const Header = () => {
 
     return (
         <div className={classes.header}>
-            <h1>Узнай основные факты о стране (всего одним кликом!)</h1>
+            <h2>Узнай основные факты о стране (всего одним кликом!)</h2>
             {/* <div>111</div> */}
             <div className={classes.hamb__button} onClick={mobileMenuHandler}></div>
             <div className={`${classes.navbar} ${menuIsShown && classes.navbar__isShown}`}>
