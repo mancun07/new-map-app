@@ -55,13 +55,12 @@ const Header = () => {
     return (
         <div className={classes.header}>
             <h2>Узнай основные факты о стране (всего одним кликом!)</h2>
-            {/* <div>111</div> */}
             <div className={classes.hamb__button} onClick={mobileMenuHandler}></div>
             <div className={`${classes.navbar} ${menuIsShown && classes.navbar__isShown}`}>
                 <div className={classes.navbar__item}>
                     <label htmlFor="population">Показать на карте страны с численностью населения:</label>
                     <select name="population" id="population" onChange={(e => onChangeHandler(e.target.value))}>
-                        <option defaultValue disabled>Выберите вариант</option>
+                        <option value={0}>Все страны</option>
                         <option value={10000000}>Более 10млн человек</option>
                         <option value={30000000}>Более 30млн человек</option>
                         <option value={50000000}>Более 50млн человек</option>
@@ -71,7 +70,8 @@ const Header = () => {
                 </div>
                 <div className={classes.navbar__item}>
                     <label htmlFor="language">Показать на карте страны, в которых выбранный ниже язык, является официальным:</label>
-                    <select name="language" id="language" onChange={e => onChangeHandler2(e.target.value)}>
+                    <select  name="language" id="language" onChange={e => onChangeHandler2(e.target.value)}>
+                        <option>Все языки</option>
                     {uniqueLanguages && uniqueLanguages.map((el,i) => {
                         return <option key={i} value={el}>{el}</option>
                     })}

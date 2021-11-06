@@ -1,16 +1,12 @@
 .loading {
   background: black;
-  color: #fff;
+  color: #fff; 
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top:100px;
-}
-
-* {
-  box-sizing: border-box;
-}
+} 
 
 .lds-dual-ring {
     display: inline-block;

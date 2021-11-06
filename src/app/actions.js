@@ -10,7 +10,6 @@ export const getData = () => {
             }
             const data = await response.json();
             dispatch(countryActions.addDataToRedux(data))
-            // console.log(data)
             
         }
 
