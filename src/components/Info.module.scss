@@ -53,3 +53,9 @@ button {
         right: 30%;
     }
 }
+
+@media (max-height: 375px) {
+    .info {
+        font-size: 0.8rem;
+    }
+}

@@ -21,10 +21,11 @@ const Info = () => {
 
     let convertedNumbersPopulation;
     let sideTraffic; 
-    // let totalArea;
+    let convertedTotalArea;
 
     if (chosenCountry) {
-        convertedNumbersPopulation = numberWithSpaces(chosenCountry[0].population) 
+        convertedNumbersPopulation = numberWithSpaces(chosenCountry[0].population);
+        convertedTotalArea = numberWithSpaces(chosenCountry[0].area);
         if (chosenCountry[0].car.side === 'right') {
             sideTraffic = 'Правостороннее'
         } else {
@@ -44,17 +45,17 @@ const Info = () => {
         </div>
        <div className={classes.main}>
             <div>Столица: {chosenCountry[0].capital}</div>
-            {/* <div>Площадь: {totalArea + 'км2'}</div> */}
+            <div>Население: {convertedNumbersPopulation} чел.</div>
+            <div>Площадь: {convertedTotalArea + ' км2'}</div>
             <div>Движение: {sideTraffic}</div>
             <div>Официальные языки в стране: {Object.values(chosenCountry[0].languages).map((el,i, arr) => { return i !== arr.length - 1 ? <span key={i}>{el}{', '}</span> : <span key={i}>{el}</span>
             })}</div>
-            <div>Население: {convertedNumbersPopulation} чел.</div>
             <div>Валюта: {Object.values(chosenCountry[0].currencies).map((el, i) => {
                 return <span key={i}>{el.name}({el.symbol})</span>
             })}</div>
-            <div>Местное время: {chosenCountry[0].timezones.map((el,i,arr) => {
+            {/* <div>Местное время: {chosenCountry[0].timezones.map((el,i,arr) => {
                 return i === (arr.length - 1) ? <span key={i}>{el}</span> : <span key={i}>: {el}{', '}</span>
-            })}</div> 
+            })}</div>  */}
        </div>
             <button onClick={clickHandler}>Скрыть</button>
         </motion.div>  }
