@@ -27,7 +27,7 @@
     width:30px;
     background: #fff;
     position: relative;
-    margin-right: 20px; 
+    top: 5px;
     cursor: pointer;    
     margin-bottom: 20px;
 
@@ -103,5 +103,15 @@
 @media (min-width: 530px) {
     .hamb__button {
         display: none;
+    }
+}
+
+@media (max-height: 375px) {
+    .navbar {
+        align-items: flex-start;
+    }
+
+    .navbar__item {
+        padding: 10px;
     }
 }
