@@ -46,7 +46,7 @@ const Info = () => {
        <div className={classes.main}>
             <div>Столица: {chosenCountry[0].capital}</div>
             <div>Население: {convertedNumbersPopulation} чел.</div>
-            <div>Площадь: {convertedTotalArea + ' км2'}</div>
+            <div>Площадь: {(convertedTotalArea === '-1') ? 'Нет данных'  : (convertedTotalArea + ' км2')}</div>
             <div>Движение: {sideTraffic}</div>
             <div>Официальные языки в стране: {Object.values(chosenCountry[0].languages).map((el,i, arr) => { return i !== arr.length - 1 ? <span key={i}>{el}{', '}</span> : <span key={i}>{el}</span>
             })}</div>
