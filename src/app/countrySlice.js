@@ -28,7 +28,6 @@ export const countrySlice = createSlice({
             state.chosenCountry = null
         },
         filterByQuantity: (state, action) => {
-            console.log(action.payload)
             state.filteredItems = state.items.filter(el => {
                 return el.population > action.payload
             })
