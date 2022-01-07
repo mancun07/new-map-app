@@ -1,22 +1,24 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 export const countrySlice = createSlice({
-    name: 'counter',
+    name: 'country',
     initialState: {
         items: [],
         infoIsShown: false,
         chosenCountry: null,
         filteredItems: null,
-        menuIsShown: false
+        menuIsShown: false,
+        loading: false,
+        error: null
     },
     reducers: {
         addDataToRedux: (state, action) => {
             state.items = action.payload
         },
-        showInfo: (state, action) => {
+        showInfo: (state) => {
             state.infoIsShown = true
         },
-        hideInfo: (state, action) => {
+        hideInfo: (state) => {
             state.infoIsShown = false
         },
         setChosenCountry: (state, action) => {
@@ -38,8 +40,14 @@ export const countrySlice = createSlice({
                 return langs && langs.includes(action.payload)
             })
         },
-        toggleMenu: (state, action) => {
+        toggleMenu: (state) => {
             state.menuIsShown = !state.menuIsShown
+        },
+        setLoading: (state, action) => {
+            state.loading = action.payload
+        },
+        setError: (state, action) => {
+            state.error = action.payload
         }
     }
 

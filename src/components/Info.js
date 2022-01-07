@@ -9,7 +9,6 @@ const Info = () => {
     const dispatch = useDispatch();
     const chosenCountry = useSelector(state => state.country.chosenCountry)
 
-
     const clickHandler = () => {
         dispatch(countryActions.hideInfo())
         dispatch(countryActions.clearChosenCountry())
@@ -31,7 +30,6 @@ const Info = () => {
         } else {
             sideTraffic = 'Левостороннее'
         }
-        // totalArea = numberWithSpaces(chosenCountry[0].area) 
     }
 
 
@@ -41,7 +39,7 @@ const Info = () => {
         <motion.div initial={{y: '-100vh'}} animate={{y: 0}} className={classes.info}>
        <div className={classes.title}>
            <div>{chosenCountry[0].name.common}</div> <br/>
-           <img src={chosenCountry[0].flags.svg}/>
+           <img src={chosenCountry[0].flags.svg} alt={'Flag'}/>
         </div>
        <div className={classes.main}>
             <div>Столица: {chosenCountry[0].capital}</div>
@@ -53,9 +51,6 @@ const Info = () => {
             <div>Валюта: {Object.values(chosenCountry[0].currencies).map((el, i) => {
                 return <span key={i}>{el.name}({el.symbol})</span>
             })}</div>
-            {/* <div>Местное время: {chosenCountry[0].timezones.map((el,i,arr) => {
-                return i === (arr.length - 1) ? <span key={i}>{el}</span> : <span key={i}>: {el}{', '}</span>
-            })}</div>  */}
        </div>
             <button onClick={clickHandler}>Скрыть</button>
         </motion.div>  }

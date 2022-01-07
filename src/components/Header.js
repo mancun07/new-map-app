@@ -9,11 +9,11 @@ const Header = () => {
     const menuIsShown = useSelector(state => state.country.menuIsShown)
     const dispatch = useDispatch()
     
-    useEffect(() => {
-        if (window.innerWidth > 500) {
-            dispatch(countryActions.toggleMenu())
-        }
-    }, [dispatch])
+    // useEffect(() => {
+    //     if (window.innerWidth > 500) {
+    //         dispatch(countryActions.toggleMenu())
+    //     }
+    // }, [dispatch, window.innerWidth])
 
 
 
@@ -31,11 +31,11 @@ const Header = () => {
         dispatch(countryActions.toggleMenu())
     }
 
+    // получаем массив, состоящий только из языков, чтобы вывести в select языки
     const onlyLanguages = items && items.map(el => {
         const {languages} = el;
-        let arr = languages && Object.values(languages)
-        let arr2 = arr && arr.length > 1 ? arr.slice(0,1) : arr
-        let mainLanguage = arr2 && arr2[0]
+        let arr = languages && Object.values(languages).slice(0,1)
+        let mainLanguage = arr && arr[0]
         return mainLanguage
     })
 
@@ -43,14 +43,24 @@ const Header = () => {
     const onlyUnique = (arr) => {
         let newArr =  [];
         for (const el of arr) {
-            if (!newArr.includes(el)) {
+            if (!newArr.includes(el) && el !== undefined) {
                 newArr.push(el)
             }
         }
         return newArr
     }
 
+    // оставляем только уникальные языки в массиве
     const uniqueLanguages = onlyUnique(onlyLanguages)
+    .sort((a, b) => {
+        return a > b ? 1 : -1
+    })
+    .map(el => {
+        return {
+            language: el,
+            id: Math.random()
+        }
+    })
 
     return (
         <div className={classes.header}>
@@ -72,8 +82,8 @@ const Header = () => {
                     <label htmlFor="language">Показать на карте страны, в которых выбранный ниже язык, является официальным:</label>
                     <select  name="language" id="language" onChange={e => onChangeHandler2(e.target.value)}>
                         <option>Все языки</option>
-                    {uniqueLanguages && uniqueLanguages.map((el,i) => {
-                        return <option key={i} value={el}>{el}</option>
+                    {uniqueLanguages && uniqueLanguages.map((el) => {
+                        return <option key={el.id} value={el.language}>{el.language}</option>
                     })}
                     </select>
                 </div>

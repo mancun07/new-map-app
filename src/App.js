@@ -6,10 +6,12 @@ import Loader from './components/Loader';
 import Info from './components/Info';
 import {getData} from './app/actions'
 import {useDispatch, useSelector} from 'react-redux';
+import Notification from './components/Notification';
 
 function App() {
     const infoIsShown = useSelector(state => state.country.infoIsShown)
-    const items = useSelector(state => state.country.items)
+    const loading = useSelector(state => state.country.loading)
+    const error = useSelector(state => state.country.error)
 
   const dispatch = useDispatch();
 
@@ -20,9 +22,10 @@ function App() {
   return (
     <div className="app">
       <Header/>
-      {!items.length && <Loader />}
+      {loading && <Loader />}
       <Map/>
-      {infoIsShown ? <Info/> : false}
+      {infoIsShown && <Info/>}
+      {error && <Notification error={error} />}
     </div>
   );
 }
