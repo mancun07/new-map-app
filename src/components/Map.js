@@ -15,7 +15,7 @@ const Map = () => {
     }
   })
 
-  const updatedFilteredItems = items.map(el => {
+  const updatedFilteredItems = filteredItems.map(el => {
     return {
       ...el,
       id: Math.random()
