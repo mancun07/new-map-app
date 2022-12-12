@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/new-map-app/static/css/main.e06a33ac.chunk.css",
-    "main.js": "/new-map-app/static/js/main.0182832e.chunk.js",
-    "main.js.map": "/new-map-app/static/js/main.0182832e.chunk.js.map",
+    "main.css": "/new-map-app/static/css/main.fcc353a1.chunk.css",
+    "main.js": "/new-map-app/static/js/main.bd2aa783.chunk.js",
+    "main.js.map": "/new-map-app/static/js/main.bd2aa783.chunk.js.map",
     "runtime-main.js": "/new-map-app/static/js/runtime-main.682c4c0f.js",
     "runtime-main.js.map": "/new-map-app/static/js/runtime-main.682c4c0f.js.map",
-    "static/js/2.934dd19b.chunk.js": "/new-map-app/static/js/2.934dd19b.chunk.js",
-    "static/js/2.934dd19b.chunk.js.map": "/new-map-app/static/js/2.934dd19b.chunk.js.map",
+    "static/js/2.7b7c0692.chunk.js": "/new-map-app/static/js/2.7b7c0692.chunk.js",
+    "static/js/2.7b7c0692.chunk.js.map": "/new-map-app/static/js/2.7b7c0692.chunk.js.map",
     "index.html": "/new-map-app/index.html",
-    "static/css/main.e06a33ac.chunk.css.map": "/new-map-app/static/css/main.e06a33ac.chunk.css.map",
-    "static/js/2.934dd19b.chunk.js.LICENSE.txt": "/new-map-app/static/js/2.934dd19b.chunk.js.LICENSE.txt"
+    "static/css/main.fcc353a1.chunk.css.map": "/new-map-app/static/css/main.fcc353a1.chunk.css.map",
+    "static/js/2.7b7c0692.chunk.js.LICENSE.txt": "/new-map-app/static/js/2.7b7c0692.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.682c4c0f.js",
-    "static/js/2.934dd19b.chunk.js",
-    "static/css/main.e06a33ac.chunk.css",
-    "static/js/main.0182832e.chunk.js"
+    "static/js/2.7b7c0692.chunk.js",
+    "static/css/main.fcc353a1.chunk.css",
+    "static/js/main.bd2aa783.chunk.js"
   ]
 }
