@@ -38,13 +38,14 @@ const Info = () => {
         { chosenCountry && 
         <motion.div initial={{y: '-100vh'}} animate={{y: 0}} className={classes.info}>
        <div className={classes.title}>
-           <div>{chosenCountry[0].name.common}</div> <br/>
+           <div>{chosenCountry[0].name.common}</div> 
+           <p>Данные на 2020г.</p>
            <img src={chosenCountry[0].flags.svg} alt={'Flag'}/>
         </div>
        <div className={classes.main}>
             <div>Столица: {chosenCountry[0].capital}</div>
             <div>Население: {convertedNumbersPopulation} чел.</div>
-            <div>Площадь: {(convertedTotalArea === '-1') ? 'Нет данных'  : (convertedTotalArea + ' км2')}</div>
+            {/* <div>Площадь: {(convertedTotalArea === '-1') ? 'Нет данных'  : (convertedTotalArea + ' км2')}</div> */}
             <div>Движение: {sideTraffic}</div>
             <div>Официальные языки в стране: {Object.values(chosenCountry[0].languages).map((el,i, arr) => { return i !== arr.length - 1 ? <span key={i}>{el}{', '}</span> : <span key={i}>{el}</span>
             })}</div>
